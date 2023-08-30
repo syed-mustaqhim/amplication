@@ -13,7 +13,7 @@
     "docker:dev:cleanup": "docker-compose -f docker-compose.dev.yml --env-file .env.docker-compose down",
     "db:migrate:deploy": "nx run-many --target=db:migrate:deploy",
     "prepare": "husky install",
-    "precommit": "lint-staged --relative",
+    "precommit": "lint-staged --relative && npx sort-package-json",
     "help": "nx help",
     "serve:server": "npx nx serve amplication-server",
     "serve:client": "npx nx serve amplication-client",
